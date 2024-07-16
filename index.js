@@ -1,16 +1,16 @@
 'use strict';
-/*let numOrStr = prompt('input number or string');
-console.log(numOrStr)
+// let numOrStr = prompt('input number or string');
+// console.log(numOrStr)
 
-if(numOrStr === null) {
-	console.log('ви скасували')
-} else if( numOrStr.trim() === '' ) {
-	console.log('Empty String');
-} else if ( isNaN( +numOrStr ) ) {
-	console.log(' number is Ba_NaN')
-} else {
-	console.log('OK!')
-}*/
+// if(numOrStr === null) {
+// 	console.log('ви скасували')
+// } else if( numOrStr.trim() === '' ) {
+// 	console.log('Empty String');
+// } else if ( isNaN( +numOrStr ) ) {
+// 	console.log(' number is Ba_NaN')
+// } else {
+// 	console.log('OK!')
+// }
 
 let numOrStr = prompt('input number or string');
 console.log(numOrStr);
@@ -21,14 +21,14 @@ switch (numOrStr) {
         break;
     default: 
         numOrStr = numOrStr.trim();
-        switch(numOrStr){
-            case '':
+        switch(true){
+            case (numOrStr === ''):
                 console.log('Empty String'); 
                 break; 
-            case (parseFloat(numOrStr)).toString():
-                console.log('OK!');
+            case (isNaN( +numOrStr )):
+                console.log('number is Ba_NaN');
                 break;
             default:
-                console.log('number is Ba_NaN');
+                console.log('OK!');
         }
 }
